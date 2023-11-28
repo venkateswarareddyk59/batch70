@@ -1,0 +1,26 @@
+For any Logical Resources in the stack, CF will make a corresponding Physical Resources in 
+your AWS account.
+It is cloud formations job to keep the logical and physical resources in sync.
+A template can be updated and then used to update the same stack.
+1.2.9. CloudWatch Basics
+Collects and manages operational data on your behalf.
+Three products in one
+ Metrics: data relating to AWS products, apps, on-prem solutions
+ Logs: collection, monitoring
+ Events: event hub
+o If an AWS service does something, CW events can perform another action
+o Generate an event to do something at a certain time of day or time of week.
+1.2.9.1. Namespace
+Container for monitoring data. Naming can be anything so long as it's not AWS/service such 
+as AWS/EC2. This is used for all metric data of that service
+1.2.9.2. Metric
+Time ordered set of data points such as:
+ CPU Usage
+ Network IN/OUT
+ Disk IO
+This is not for a specific server. This could get things from different servers.
+Anytime CPU Utilization is reported, the datapoint will report:
+ Timestamp = 2019-12-03
+ Value = 98.3
+Dimensions could be used to get metrics for a specific instance or type of instance, among 
+others. They separate data points for different things or perspectives within the same
